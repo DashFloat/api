@@ -11,7 +11,6 @@ defmodule DashFloatWeb.Router do
 
   # Enable Swoosh mailbox preview in development
   if Application.compile_env(:dash_float, :dev_routes) do
-
     scope "/dev" do
       pipe_through [:fetch_session, :protect_from_forgery]
 
