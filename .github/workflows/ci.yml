@@ -77,5 +77,8 @@ jobs:
       - name: Compile
         run: mix compile --warnings-as-errors
 
+      - name: Run Linter
+        run: mix lint.ci
+
       - name: Run Tests
         run: mix test
