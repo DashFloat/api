@@ -41,6 +41,7 @@ defmodule DashFloat.MixProject do
   defp deps do
     [
       {:bandit, "1.2.2"},
+      {:credo, "1.7.4", only: [:dev, :test], runtime: false},
       {:dns_cluster, "0.1.3"},
       {:ecto_sql, "3.11.1"},
       {:excoveralls, "0.18.0", only: :test},
@@ -68,8 +69,8 @@ defmodule DashFloat.MixProject do
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
-      lint: ["format"],
-      "lint.ci": ["format --check-formatted"]
+      lint: ["format", "credo"],
+      "lint.ci": ["format --check-formatted", "credo"]
     ]
   end
 end
