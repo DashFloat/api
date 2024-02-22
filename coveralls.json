@@ -4,6 +4,7 @@
     "lib/dash_float/application.ex",
     "lib/dash_float/repo.ex",
     "lib/dash_float_web.ex",
+    "lib/dash_float_web/controllers/dummy_controller.ex",
     "lib/dash_float_web/endpoint.ex",
     "lib/dash_float_web/gettext.ex",
     "lib/dash_float_web/router.ex",
