@@ -7,6 +7,8 @@ defmodule DashFloatWeb.Router do
 
   scope "/api", DashFloatWeb do
     pipe_through :api
+
+    get "/dummy", DummyController, :index
   end
 
   # Enable Swoosh mailbox preview in development

@@ -17,6 +17,13 @@ defmodule DashFloat.MixProject do
         "coveralls.post": :test,
         "coveralls.html": :test,
         "coveralls.cobertura": :test
+      ],
+      dialyzer: [
+        plt_add_apps: [
+          :ex_unit
+        ],
+        plt_file: {:no_warn, "priv/plts/project.plt"},
+        list_unused_filters: true
       ]
     ]
   end
@@ -42,6 +49,7 @@ defmodule DashFloat.MixProject do
     [
       {:bandit, "1.2.2"},
       {:credo, "1.7.4", only: [:dev, :test], runtime: false},
+      {:dialyxir, "1.4.3", only: [:dev, :test], runtime: false},
       {:dns_cluster, "0.1.3"},
       {:ecto_sql, "3.11.1"},
       {:ex_machina, "2.7.0", only: :test},
